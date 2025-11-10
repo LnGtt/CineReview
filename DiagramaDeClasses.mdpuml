@@ -1,0 +1,37 @@
+@startuml CineReview
+
+abstract class "Midia" {
++MidiaId
++Titulo
++Genero
++Sinopse
+{abstract} +Duracao
++ClassificacaoIndicativa
++DataLancamento
++Elenco
++EquipeTecnica
+}
+
+class Filme {
+}
+
+class Serie {
+}
+
+class Temporada {
+}
+
+class Episodio {
+}
+
+class Usuario{
+}
+
+class Avaliacao{
+}
+
+Avaliacao --> Usuario
+Midia <|-- Filme
+Midia <|-- Serie
+
+@enduml
