@@ -57,6 +57,32 @@ class Administrador{
 }
 
 class Avaliacao{
+string Usuario(talvez)
+double +Narrativa
+double +Trama
+double +Ritmo
+double +Personagens
+double +ConstrucaoDeMundo
+double +TematicaEMensagem
+double +Execucao
+double +Edicao
+double +Direcao
+double +Atuacao
+double +ComponentesVisuais
+double +DirecaoDeArte
+double +Cinematrografia
+double +CenariosEAmbientes
+double +FigurinoEMaquiagem
+double +EfeitosVisuais
+double +QualidadeDeAnimacao
+double +ComponentesAuditivos
+double +ScoreESoundtrack
+double +EfeitosSonoros
+
++CalculaNarrativa()
++CalculaExecucao()
++CalculaComponentesVisuais()
++CalculaComponentesAuditivos()
 }
 
 Serie --> Temporada
