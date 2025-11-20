@@ -9,7 +9,7 @@
         public List<Avaliacao> Avaliacoes { get; private set; }
         public List<Midia> Favoritos { get; private set; }
 
-        //Construtor
+        //Construtor_____________________________________________________________________________________________________________________________
         public Usuario(string nomeUsuario, string email, string senhaHash)
         {
             Id = Guid.NewGuid();
@@ -20,7 +20,7 @@
             Favoritos = new List<Midia>();
         }
 
-        //Métodos
+        //Métodos_____________________________________________________________________________________________________________________________
         /*public bool ValidarSenha(string senha)
         {
             if (senha == null)
