@@ -6,6 +6,7 @@ namespace CineReview.Models
     {
         //Variáveis de apoio para setters:
         private Usuario _usuario;
+        private string _critica;
         public Guid Id { get; private set; }
         public DateTime DataAvaliacao { get; private set; }
         public Guid UsuarioId { get; private set; }
@@ -17,6 +18,19 @@ namespace CineReview.Models
             {
                 if (value == null) throw new ArgumentNullException($"Objeto {nameof(value)} não pode ser vazio!");
                 _usuario = value;
+            }
+        }
+        public string Critica
+        {
+            get => _critica;
+            set
+            {
+                // VALIDAÇÃO: Limite de caracteres (ex: 500 caracteres)
+                if (value != null && value.Length > 500)
+                {
+                    throw new ArgumentException("A crítica não pode ter mais de 500 caracteres.");
+                }
+                _critica = value;
             }
         }
 
@@ -177,7 +191,7 @@ namespace CineReview.Models
         }
 
         //Construtor_____________________________________________________________________________________________________________________________
-        public Avaliacao(Usuario usuario, Guid avaliadoId,
+        public Avaliacao(Usuario usuario, Guid avaliadoId, string critica,
             int notaTrama, int notaRitmo, int notaDevPersonagens, int notaConstrucaoMundo, int notaTematica,
             int notaAtuacao, int notaEdicao, int notaDirecao,
             int notaArte, int notaCinematografia, int notaCenarios, int notaFigurinos, int notaEfeitosVisuais, int notaQualidadeImagem,
@@ -189,6 +203,7 @@ namespace CineReview.Models
             // Vincula o usuário
             Usuario = usuario;
             UsuarioId = usuario.Id;
+            Critica = critica;
 
             AvaliadoId = avaliadoId;
             NotaTrama = notaTrama;
