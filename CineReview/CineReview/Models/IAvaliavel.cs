@@ -13,7 +13,7 @@
         na classe Filme e Temporada, a última não é uma classe filha de Midia, por isso a interface*/
         //Interface não é instanciada, por tanto não precisa de construtor
 
-        //Métodos
+        //Métodos_____________________________________________________________________________________________________________________________
         void AdicionarAvaliacao(Avaliacao avaliacao);
     }
 }

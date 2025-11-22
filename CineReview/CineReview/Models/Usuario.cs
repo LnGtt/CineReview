@@ -12,7 +12,7 @@ namespace CineReview.Models
         public List<Avaliacao> Avaliacoes { get; private set; }
         public List<Midia> Favoritos { get; private set; }
 
-        //Construtor
+        //Construtor_____________________________________________________________________________________________________________________________
         public Usuario(string nomeUsuario, string email, string senhaHash)
         {
             Id = Guid.NewGuid();
@@ -22,8 +22,6 @@ namespace CineReview.Models
             Avaliacoes = new List<Avaliacao>();
             Favoritos = new List<Midia>();
         }
-
-
 
         //Métodos
         public bool ValidarSenha(string senha)

@@ -24,7 +24,7 @@ namespace CineReview.Models
         //Varíaveis de apoio para setters:
         private int _notaTrama, _notaRitmo, _notaDevPersonagens, _notaConstrucaoMundo, _notaTematica, _notaAtuacao, _notaEdicao, _notaDirecao, _notaArte, _notaCinematografia, _notaCenarios, _notaFigurinos, _notaEfeitosVisuais, _notaQualidadeImagem, _notaScore, _notaEfeitosSonoros;
 
-        //Notas de Narrativa (0-10)
+        //Notas de Narrativa (0-10)_____________________________________________________________________________________________________________________________
         public int NotaTrama 
         { 
             get => _notaTrama;
@@ -71,7 +71,7 @@ namespace CineReview.Models
             }
         }
 
-        //Notas de Execução (0-10)
+        //Notas de Execução (0-10)_____________________________________________________________________________________________________________________________
         public int NotaAtuacao
         {
             get => _notaAtuacao;
@@ -100,7 +100,7 @@ namespace CineReview.Models
             }
         }
 
-        //Notas Visuais (0-10)
+        //Notas Visuais (0-10)_____________________________________________________________________________________________________________________________
         public int NotaArte
             {
             get => _notaArte;
@@ -156,7 +156,7 @@ namespace CineReview.Models
             }
         }
 
-        //Notas Auditivas (0-10)
+        //Notas Auditivas (0-10)_____________________________________________________________________________________________________________________________
         public int NotaScore
             {
             get => _notaScore;
@@ -176,7 +176,7 @@ namespace CineReview.Models
             }
         }
 
-        //Construtor
+        //Construtor_____________________________________________________________________________________________________________________________
         public Avaliacao(Usuario usuario, Guid avaliadoId,
             int notaTrama, int notaRitmo, int notaDevPersonagens, int notaConstrucaoMundo, int notaTematica,
             int notaAtuacao, int notaEdicao, int notaDirecao,
@@ -209,7 +209,7 @@ namespace CineReview.Models
             NotaEfeitosSonoros = notaEfeitosSonoros;
         }
 
-        //Métodos
+        //Métodos_____________________________________________________________________________________________________________________________
         public double GetMediaNarrativa()
         {
             double media = (NotaTrama + NotaRitmo + NotaDevPersonagens + NotaConstrucaoMundo + NotaTematica) / 5.0;
